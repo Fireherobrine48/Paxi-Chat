@@ -1,0 +1,155 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+#login {
+  text-align: center;
+  margin-top: 100px;
+}
+
+#chatroom {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.header #userCount {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.header #currentUser {
+  font-size: 14px;
+  color: #ccc;
+}
+
+#chat {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #fff;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+#messages {
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 70%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.message.system {
+  background-color: #e0f7fa;  /* Light Blue Background */
+  color: #0073e6; /* Blue Text Color */
+  align-items: center;
+  justify-content: center;
+}
+
+.message.user {
+  background-color: #f0f0f0;
+}
+
+.message .username {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.message .profile-pic {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.message.system .profile-pic {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-image: url('https://cdn.pixabay.com/photo/2024/05/24/16/20/processor-8785387_640.jpg');
+  background-size: cover;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ccc;
+}
+
+#messageInput {
+  flex: 1;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #0073e6;
+  color: #fff;
+  border-radius: 50px; /* Round buttons on login screen */
+  cursor: pointer;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+button:active {
+  background-color: #003f8a;
+}
+
+button:last-child {
+  margin-right: 0;
+}
+
+button.squircle {
+  border-radius: 15px; /* Squircle buttons in chatroom */
+}
+
+.footer-text {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  margin-top: 10px;
+}
+
+input[type="file"] {
+  margin-top: 10px;
+}
+
+select {
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 5px;
+}

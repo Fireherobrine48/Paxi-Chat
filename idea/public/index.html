@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paxi Chatroom</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+</head>
+<body>
+  <div id="login">
+    <h1>🌐 Global Chatroom</h1>
+    <input id="usernameInput" type="text" placeholder="Enter your username">
+    <select id="languageSelect">
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
+      <option value="gr">Greek</option>
+      <!-- Add more languages as needed -->
+    </select>
+    <input id="profilePicInput" type="file" accept="image/*">
+    <button onclick="joinChat()">Join Chat</button>
+  </div>
+
+  <div id="chatroom" style="display: none;">
+    <div class="header">
+      <h2>
+        Welcome to the Chatroom 
+        <small id="userCount">(0 users online)</small>
+      </h2>
+      <div id="currentUser">Logged in as: <span></span></div>
+      <button onclick="leaveChat()">Leave Chat</button>
+    </div>
+    <div id="chat">
+      <div id="messages"></div>
+    </div>
+    <div class="footer">
+      <input id="messageInput" type="text" placeholder="Type a message...">
+      <div>
+        <button onclick="sendMessage()">Send</button>
+        <button onclick="sendImage()">Send Image</button>
+        <input type="file" id="fileInput" accept=".txt,.py,.html,.js,.pyw,.jar,.css,.cpp" />
+        <button onclick="sendFile()">Send File</button>
+      </div>
+      <p class="footer-text">Paxi Chat Alpha 1</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
